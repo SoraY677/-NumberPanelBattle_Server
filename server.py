@@ -19,6 +19,7 @@ class ServerHandler(BaseHTTPRequestHandler):
     def do_POST(self):
         testjson = {'test':200}
         print("posted!")
+        self.send_header("Access-Control-Allow-Origin", "*")
         self.send_response(200)
         self.send_header("Content-type", "text/json")
         self.end_headers()
