@@ -1,2 +1,1 @@
-worker: python server.py
-web: gunicorn --log-file=- server:application
+web: gunicorn mysite.wsgi --log-file -
