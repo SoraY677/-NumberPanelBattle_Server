@@ -138,4 +138,14 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
+INSTALLED_APPS = (
+    'corsheaders',
+)
+
+MIDDLEWARE = [  # Or MIDDLEWARE_CLASSES on Django < 1.10
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+]
+
 CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
