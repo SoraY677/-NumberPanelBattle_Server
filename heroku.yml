@@ -1,7 +1,3 @@
 build:
-  languages:
-    - python
-  packages:
-    - libopencv-dev
-run:
-  web: gunicorn web:app --log-file=-
+  docker:
+    web: Dockerfile
