@@ -1,2 +1,2 @@
 worker: python server.py
-web: gunicorn wsgi:application --log-file -
+web: gunicorn server:application --log-file -
